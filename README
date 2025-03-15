@@ -1,12 +1,9 @@
-Readme is to feature all notes/ commands for the website
+# Project: Share Depository with GO
 
-**To run database**
+## 📹 Project Demo
+[![Watch the video](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](go%20project%20recording.mp4)
 
-docker compose -f 'infra\db\docker-compose.yml' up -d --build 
-docker exec -it postgres-db psql -U postgres
-
-**Database seeding**
-creating initial talbe
+Click the link above to watch the project demo.
 
 
 dependencies :
