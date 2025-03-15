@@ -1,0 +1,60 @@
+# Test Cases for Share Depository API
+# Base URL: http://localhost:8080/api
+# Run these with the REST Client extension in VS Code
+
+### 1. Add Investor
+POST http://localhost:8080/api/investor/add
+Content-Type: application/json
+
+{
+  "investor_name": "Rohan",
+  "govt_id": "rcy123"
+}
+
+### 2. Add Company
+POST http://localhost:8080/api/company/add
+Content-Type: application/json
+
+{
+  "ticker": "NVID",
+  "face_value": 150,
+  "company_name": "NVIDIA Inc."
+}
+
+### 3. Get All Companies
+GET http://localhost:8080/api/company/
+
+### 4. Credit Shares
+POST http://localhost:8080/api/investor/credit_shares
+Content-Type: application/json
+
+{
+  "govt_id": "rcy123",
+  "ticker": "NVID",
+  "quantity": 200
+}
+
+### 5. Debit Shares (Partial Sell)
+POST http://localhost:8080/api/investor/debit_shares
+Content-Type: application/json
+
+{
+  "govt_id": "rcy123",
+  "ticker": "NVID",
+  "quantity": 50
+}
+
+### 6. Debit Shares (Complete Sell)
+POST http://localhost:8080/api/investor/debit_shares
+Content-Type: application/json
+
+{
+  "govt_id": "rcy123",
+  "ticker": "NVID",
+  "quantity": 300
+}
+
+
+### 6. List All shares investor has 
+GET http://localhost:8080/api/investor/portfolio?govt_id=xyz699
+

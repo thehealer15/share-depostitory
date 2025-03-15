@@ -1,0 +1,27 @@
+models for actors/ entites in Application :
+
+Company : 
+Ticker 
+face_value 
+company_name 
+
+
+APIs :
+POST /api/company/add_company
+DELETE /api/company/delist_company
+GET /api/company/get-all 
+
+
+Investor :
+govt_id 
+name
+holdings
+
+POST /api/investor/add_investor 
+DELETE /api/investor/delete_investor
+
+
+**shares transactions**
+
+POST /app/investor/credit_shares
+POST /app/investor/debit_shares 

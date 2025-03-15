@@ -1,0 +1,36 @@
+Readme is to feature all notes/ commands for the website
+
+**To run database**
+
+docker compose -f 'infra\db\docker-compose.yml' up -d --build 
+docker exec -it postgres-db psql -U postgres
+
+**Database seeding**
+creating initial talbe
+
+
+dependencies :
+- swagger related 
+go get -u github.com/swaggo/swag
+go get -u github.com/swaggo/gin-swagger
+go get -u github.com/swaggo/files
+go get -u github.com/gin-gonic/gin
+go get -u github.com/bytedance/sonic
+go get -u github.com/gabriel-vasile/mimetype
+go get -u github.com/gin-contrib/sse
+go get -u github.com/go-playground/validator/v10
+go get -u github.com/json-iterator/go
+go get -u github.com/mattn/go-isatty
+go get -u github.com/ugorji/go/codec
+
+
+**APIs tested**
+
+1. Adding company 
+    POST http://localhost:8080/api/company/add 
+    
+{
+  "ticker": "DMART",
+  "face_value": 69,
+  "company_name": "Gavali"
+}
