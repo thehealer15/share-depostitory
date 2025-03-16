@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:alpine
+    container_name: postgres-db
+    ports:
+      - "6969:5432"
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    restart: unless-stopped
